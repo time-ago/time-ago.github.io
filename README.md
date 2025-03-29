@@ -1,3 +1,2 @@
 # Timeago docs
-
-Documentation website for [timeago](https://github.com/SerhiiCho/timeago) written with [VuePress 2](https://v2.vuepress.vuejs.org/)
+Documentation website for [timeago](https://github.com/SerhiiCho/timeago) package for Go (Golang) written with [Vitepress](https://vitepress.dev/)
