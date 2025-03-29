@@ -24,7 +24,7 @@ Timeago has several nice features, such as:
 - 🕰️ Unix timestamp parsing
 - ⏱️ Support for date-time strings in the `YYYY-MM-DD HH:MM:SS` format
 - 📆 Compatibility with time.Time from the Go standard library
-- 📝 Detailed [CHANGELOG.md](https://github.com/SerhiiCho/timeago/blob/main/CHANGELOG.md) for all updates and features
+- 📝 Detailed [CHANGELOG.md](https://github.com/SerhiiCho/timeago/blob/master/CHANGELOG.md) for all updates and features
 - 📖 Thorough documentation for ease of use
 
 ## Supported languages

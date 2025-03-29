@@ -21,7 +21,7 @@ The library has several nice features, such as:
 - ⏱️ Support for date-time strings in the `YYYY-MM-DD HH:MM:SS` format
 - 📆 Compatibility with `time.Time` struct from the Go standard library
 - ✍️ Easy [contribution](/v3/contribute) of new language support
-- 📝 Detailed [CHANGELOG.md](https://github.com/SerhiiCho/timeago/blob/main/CHANGELOG.md) for all updates and features
+- 📝 Detailed [CHANGELOG.md](https://github.com/SerhiiCho/timeago/blob/master/CHANGELOG.md) for all updates and features
 - 📖 Thorough documentation for ease of use
 
 ## Supported Languages

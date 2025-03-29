@@ -27,4 +27,4 @@ go get -u ./...
 ```
 
 ## Requirements
-You can find the minimum requirement version of Go for the Timeago library in the [go.mod](https://github.com/SerhiiCho/timeago/blob/main/go.mod) file on GitHub.
+You can find the minimum requirement version of Go for the Timeago library in the [go.mod](https://github.com/SerhiiCho/timeago/blob/master/go.mod) file on GitHub.

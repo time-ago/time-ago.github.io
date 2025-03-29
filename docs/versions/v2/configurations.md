@@ -102,5 +102,5 @@ func main() {
 With this configurations, you'll get `5 д` instead of `5 дней назад`.
 
 :::tip Supported words
-You can find the full list of words that you can override in `langs/` directory in the root of the project, or you can find them in our [GitHub repository](https://github.com/SerhiiCho/timeago/tree/main/langs).
+You can find the full list of words that you can override in `langs/` directory in the root of the project, or you can find them in our [GitHub repository](https://github.com/SerhiiCho/timeago/tree/master/langs).
 :::

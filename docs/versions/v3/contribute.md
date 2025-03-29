@@ -15,7 +15,7 @@ For better reference, I've added Japanese language support in [this commit](http
 :::
 
 ## Step 1. Language Set File
-Language set files live in [langs](https://github.com/SerhiiCho/timeago/tree/main/langs) directory. Each translation file is a JSON object with the name matching the [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) standard of the language that you want to add.
+Language set files live in [langs](https://github.com/SerhiiCho/timeago/tree/master/langs) directory. Each translation file is a JSON object with the name matching the [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) standard of the language that you want to add.
 
 These files follow the [CLDR Specifications](https://cldr.unicode.org/index/cldr-spec/plural-rules) for plural rules for each language. Keep in mind that the only required field that we need to define for time unit is `other`, since this field is used as a fallback if no other rule matches.
 
@@ -96,7 +96,7 @@ Let me give you a little bit more explanation about the fields in the file:
 - `"justnow": "Только что"` - This is the word that is used to indicate that the time is just now. When the time is less than 1 minute
 
 ## Step 2. Language Rules
-All rules for each language is defined in `grammarRules` variable in [rules.go](https://github.com/SerhiiCho/timeago/blob/main/rules.go) file. Rule is just a set of conditions that define when to apply particular form from the language set.
+All rules for each language is defined in `grammarRules` variable in [rules.go](https://github.com/SerhiiCho/timeago/blob/master/rules.go) file. Rule is just a set of conditions that define when to apply particular form from the language set.
 
 Here is the example for Russian rules:
 
@@ -156,7 +156,7 @@ English, Dutch and German languages have the same rules for plural forms, so we 
 Tests for languages live in `tests` directory. Each language has it's own file. The easies way to add tests for your language is to copy paste one of the tests and change the test cases to match your language.
 
 ## Step 4. New Constant
-To the top of the [config.go](https://github.com/SerhiiCho/timeago/blob/main/config.go) file, add a new constant with the language code that you want to add. Here is an example of adding Chinese language constant:
+To the top of the [config.go](https://github.com/SerhiiCho/timeago/blob/master/config.go) file, add a new constant with the language code that you want to add. Here is an example of adding Chinese language constant:
 
 ```go
 package timeago
@@ -179,7 +179,7 @@ To the `README.md` file add a country flag for the language that you want to add
 ```
 
 ## Step 6. Changelog
-The last step is to update the [CHANGELOG.md](https://github.com/SerhiiCho/timeago/blob/main/CHANGELOG.md) file to let the users know that you've added a new language support. Here is an example of how I've added Chinese language to the change log:
+The last step is to update the [CHANGELOG.md](https://github.com/SerhiiCho/timeago/blob/master/CHANGELOG.md) file to let the users know that you've added a new language support. Here is an example of how I've added Chinese language to the change log:
 
 ```md
 - Added [OnlineThreshold](https://time-ago.github.io/v3/configurations.html#thresholds) parameter to the configurations to set the threshold for the "Online" status
@@ -190,4 +190,4 @@ The last step is to update the [CHANGELOG.md](https://github.com/SerhiiCho/timea
 ## Conclusion
 That's it! In total you should have `6` files changed/added. After you've done all the steps, you can create a pull request and I'll review it as soon as possible. If everything is fine, I'll merge your pull request and your language will be available in the next release of the Timeago.
 
-You can pull your changes to the `main` branch and I will do the rest of the work to update the documentation website and release a new version of the Timeago.
+You can pull your changes to the `master` branch and I will do the rest of the work to update the documentation website and release a new version of the Timeago.
