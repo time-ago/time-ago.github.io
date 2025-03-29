@@ -31,7 +31,7 @@ export default defineVersionedConfig(
             logo: '/images/logo.png',
             footer: {
                 message:
-                    'Released under the <a href="https://github.com/SerhiiCho/timeago/blob/main/LICENSE.md" target="_blank">MIT License</a>',
+                    'Released under the <a href="https://github.com/SerhiiCho/timeago/blob/master/LICENSE.md" target="_blank">MIT License</a>',
                 copyright:
                     'Copyright © 2019 - present <a href="https://serhii.io/about-me" target="_blank">Serhii Chornenkyi (Serhii Cho)</a>',
             },
@@ -52,7 +52,7 @@ export default defineVersionedConfig(
                 { text: 'Community', link: '/community' },
                 {
                     text: 'Changelog',
-                    link: 'https://github.com/SerhiiCho/timeago/blob/main/CHANGELOG.md',
+                    link: 'https://github.com/SerhiiCho/timeago/blob/master/CHANGELOG.md',
                 },
             ],
             sidebar: {
