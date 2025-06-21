@@ -1,0 +1,13 @@
+name: timeago-docs
+
+services:
+    app:
+        image: timeago-docs
+        container_name: timeago-docs
+        build:
+            context: .
+        volumes:
+            - .:/app
+            - /app/node_modules
+        ports:
+            - 3000:5173
