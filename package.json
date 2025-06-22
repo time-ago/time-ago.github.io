@@ -1,6 +1,6 @@
 {
     "name": "time-ago",
-    "main": "index.js",
+    "main": "docs/.vitepress/index.js",
     "repository": "https://github.com/time-ago/time-ago.github.io",
     "author": "SerhiiCho <serhiicho@protonmail.com>",
     "license": "MIT",
@@ -16,11 +16,9 @@
     "scripts": {
         "dev": "vitepress dev docs --host",
         "build": "vitepress build docs",
-        "preview": "yarn build && vitepress preview docs",
-        "deploy": "yarn build && gh-pages -d docs/.vitepress/dist"
+        "preview": "yarn build && vitepress preview docs"
     },
     "devDependencies": {
-        "gh-pages": "^6.2.0",
         "vitepress": "^1.5.0"
     }
 }
