@@ -16,7 +16,7 @@ podman-compose build
 Run this command to install npm packages and generate a `node_modules` directory on your local machine:
 
 ```bash
-docker compose run --rm app npm i
+podman-compose run --rm app npm i
 ```
 
 #### Run the Container
