@@ -2,7 +2,9 @@ node_modules
 .temp
 .cache
 .vscode
+.DS_Store
 dist
 /docs/.vitepress/dist
 /docs/.vitepress/cache
 yarn.lock
+Session.vim
