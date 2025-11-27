@@ -71,12 +71,6 @@ const members = [
         links: [{ icon: 'github', link: 'https://github.com/matthewmueller' }],
     },
     {
-        avatar: 'https://www.github.com/Tim3Triver.png',
-        name: '赵晓鹏',
-        title: 'Early Stargazer',
-        links: [{ icon: 'github', link: 'https://github.com/Tim3Triver' }],
-    },
-    {
         avatar: 'https://www.github.com/LixvYang.png',
         name: 'LixvYang',
         title: 'Early Stargazer',
