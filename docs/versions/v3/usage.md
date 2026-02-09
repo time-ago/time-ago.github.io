@@ -5,10 +5,10 @@ description: Learn how to quickly get started with the Timeago library
 ---
 
 # Usage Guide
-Pass the date into the `timeago.Parse()` function. It counts the interval between current datetime and given datetime and returns parsed string in format `x time ago`. The library can work not only with dates in the past but future dates as well. The usage is pretty straight forward.
+Pass the date into the `timeago.Parse()` function. It calculates the interval between the current datetime and the given datetime, returning a parsed string in the format `x time ago`. The library can work not only with dates in the past but future dates as well. The usage is pretty straight forward.
 
 ### Allowed types
-Function `timeago.Parse()` excepts different types of datetime and returns the result and error. The allowed inputs are:
+The `timeago.Parse()` function accepts different types of datetime and returns the result and an error. The allowed inputs are:
 
 - Unix timestamp: `int`, `int64`, `int32`, `uint`, `uint64`, `uint32`, `string`
     - Example: `1642607826`
@@ -20,7 +20,7 @@ Function `timeago.Parse()` excepts different types of datetime and returns the r
 Any other types or formats passed to the `Parse` function will return an error!
 
 ### Date in the Past
-If you pass a date in the past, Timeago will return the output with `ago` word in it suggesting that the date is in the past. Unless you specify the `noSuffix` option. Read [here](/v3/options.html#available-options) about options and how to use them.
+If you pass a date in the past, Timeago will return output containing the word `ago`, indicating that the date is in the past. Unless you specify the `noSuffix` option. Read [here](/v3/options.html#available-options) about options and how to use them.
 
 ```go
 import (
@@ -43,7 +43,7 @@ func main() {
 ```
 
 ### Date in the Future
-Future dates are also supported. Timeago will return the correct string without `ago` word in it when the date is in the future.
+Future dates are also supported. Timeago will return the correct string without the word `ago` when the date is in the future.
 
 ```go
 import (

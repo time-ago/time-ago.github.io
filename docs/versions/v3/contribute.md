@@ -81,7 +81,7 @@ Here's the example of `ru.json`
 }
 ```
 
-In this file we don't actually need to define the `few` field, since the the fallback is also matches the `few`, but I just wanted to demonstrate the full version of the file so that you have an idea how many fields are there.
+In this file, we don't actually need to define the `few` field, since the fallback also matches `few`, but I wanted to demonstrate the full version of the file so you have an idea of how many fields there are.
 
 ### Fields
 Let me give you a little bit more explanation about the fields in the file:
@@ -93,10 +93,10 @@ Let me give you a little bit more explanation about the fields in the file:
   - `{ago}` is the word that is used to indicate that the time is in the past or in the future.
 - `"ago": "назад"` - This is the word that is used to indicate that the time is in the past.
 - `"online": "В сети"` - This is the word that is used to indicate that the user is online.
-- `"justnow": "Только что"` - This is the word that is used to indicate that the time is just now. When the time is less than 1 minute
+- `"justnow": "Только что"` - This is the word that is used to indicate that the time is just now, when the time is less than 1 minute.
 
 ## Step 2. Language Rules
-All rules for each language is defined in `grammarRules` variable in [rules.go](https://github.com/SerhiiCho/timeago/blob/master/rules.go) file. Rule is just a set of conditions that define when to apply particular form from the language set.
+All rules for each language are defined in the `grammarRules` variable in the [rules.go](https://github.com/SerhiiCho/timeago/blob/master/rules.go) file. Rule is just a set of conditions that define when to apply particular form from the language set.
 
 Here is the example for Russian rules:
 
@@ -150,10 +150,10 @@ var grammarRules = func(num int) map[string]*Rule {
 }
 ```
 
-English, Dutch and German languages have the same rules for plural forms, so we can just add them to the same rule key.
+English, Dutch, and German languages have the same rules for plural forms, so we can add them to the same rule key.
 
 ## Step 3. Tests
-Tests for languages live in `tests` directory. Each language has it's own file. The easies way to add tests for your language is to copy paste one of the tests and change the test cases to match your language.
+Tests for languages live in the `tests` directory. Each language has its own file. The easies way to add tests for your language is to copy paste one of the tests and change the test cases to match your language.
 
 ## Step 4. New Constant
 To the top of the [config.go](https://github.com/SerhiiCho/timeago/blob/master/config.go) file, add a new constant with the language code that you want to add. Here is an example of adding Chinese language constant:
@@ -188,6 +188,6 @@ The last step is to update the [CHANGELOG.md](https://github.com/SerhiiCho/timea
 ```
 
 ## Conclusion
-That's it! In total you should have `6` files changed/added. After you've done all the steps, you can create a pull request and I'll review it as soon as possible. If everything is fine, I'll merge your pull request and your language will be available in the next release of the Timeago.
+That's it! In total, you should have 6 files changed or added. After you've done all the steps, you can create a pull request and I'll review it as soon as possible. If everything is fine, I'll merge your pull request and your language will be available in the next release of the Timeago.
 
-You can pull your changes to the `master` branch and I will do the rest of the work to update the documentation website and release a new version of the Timeago.
+You can push your changes to the master branch, and I will handle the rest of the work to update the documentation website and release a new version of Timeago.

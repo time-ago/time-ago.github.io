@@ -5,7 +5,7 @@ description: Learn how to quickly get started with the Timeago library by instal
 ---
 
 # Installation
-Read how to install the Timeago in your Go project and what are the requirements for it.
+Learn how to install Timeago in your Go project and understand the requirements.
 
 :::tip What is Timeago?
 Visit our page "[What is Timeago?](/v3/what-is-timeago)" to learn more about the Timeago library and its mission.

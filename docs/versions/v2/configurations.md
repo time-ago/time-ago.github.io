@@ -9,10 +9,10 @@ You are viewing the outdated version of Timeago library. [Switch to the latest v
 :::
 
 # Configurations
-We can set library configurations with `SetConfig` function that accepts `Config` structure.
+We can set library configurations with the `SetConfig` function that accepts a `Config` structure.
 
 ## Language
-Optionally you can set the language in your application.
+Optionally, you can set the language in your application.
 
 > Default value is `"en"`
 
@@ -31,9 +31,7 @@ You can find the full list of supported languages in the [What is Timeago?](/v2/
 :::
 
 ## Location
-Optionally you can set the location in your application. The functionality is going to be the
-same, but with 1 exception. In the absence of time zone information, library interprets a time as UTC;
-With location configuration it interprets the time as in the given location.
+Optionally, you can set the location in your application. The functionality will be the same, but with one exception: in the absence of time zone information, the library interprets a time as UTC; with location configuration, it interprets the time as in the given location.
 
 :::warning
 There is no default value for this option.
@@ -54,7 +52,7 @@ Please make sure that timezone configuration is correct for your location. It is
 :::
 
 ## Overrides translations
-There are cases when you want to replace certain words with specific ones. For example you might want to replace "days" with "d" to get "4 d ago". You can do it with by setting specific configurations for each language. Let's see the example where we want to override words for English language:
+There are cases when you want to replace certain words with specific ones. For example, you might want to replace "days" with "d" to get "4 d ago". You can do this by setting specific configurations for each language. Let's see an example where we want to override words for the English language:
 
 ```go
 import "github.com/SerhiiCho/timeago/v2"
@@ -77,7 +75,7 @@ func main() {
 }
 ```
 
-After this configuration, instead of getting, for example, `4 days ago` you'll get `4 d` and instead of `1 week ago` you'll get `1 w`. For other languages it's pretty much the same thing:
+After this configuration, instead of getting, for example, `4 days ago`, you'll get `4 d`, and instead of `1 week ago`, you'll get `1 w`. For other languages, it's pretty much the same thing:
 
 ```go
 import "github.com/SerhiiCho/timeago/v2"

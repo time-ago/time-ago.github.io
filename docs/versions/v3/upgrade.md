@@ -15,8 +15,8 @@ To simplify the upgrade process, no new features have been introduced in this re
 - **Improved error handling**. The `Parse` function now returns an error as the second returned value. You need to handle it in your code
 
 ## Improvements
-- **New language addition is improved**. Add ability to change the output of the `Parse` function when adding a support for a new language by adding a `format` field to a `JSON` file
-- **New language files structure**. Change the file structure for `JSON` language files. They have now format to match [CLDR Specifications](https://cldr.unicode.org/index/cldr-spec/plural-rules)
+- **New language addition is improved**. Add the ability to change the output of the `Parse` function when adding support for a new language by adding a `format` field to a JSON file
+- **New language files structure**. Change the file structure for JSON language files. They now have a format that matches [CLDR Specifications](https://cldr.unicode.org/index/cldr-spec/plural-rules)
 - **New function `Reconfigure`**. Added a new function to reconfigure the Timeago configurations. Unlike the `Configure` function, it will override the previous configurations with the new ones.
 
 ## Upgrade Steps
@@ -91,7 +91,7 @@ timeago.Configure(timeago.Config{
 ```
 :::
 
-We've made this change because the `v3` version now supports the [CLDR Specifications](https://cldr.unicode.org/index/cldr-spec/plural-rules) for plural rules. You can now define different forms for different numbers of units for difficult languages like Slavic, Arabic, and others. Which was impossible in the previous version.
+We made this change because the v3 version now supports the [CLDR Specifications](https://cldr.unicode.org/index/cldr-spec/plural-rules) for plural rules. You can now define different forms for different numbers of units for complex languages like Slavic, Arabic, and others, which was impossible in the previous version.
 
 ### Step 5: Handle Errors
 The `timeago.Parse()` function now returns 2 values: the result and an error. You need to handle the error for each call to the `Parse` function.

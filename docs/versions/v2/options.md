@@ -9,7 +9,7 @@ You are viewing the outdated version of Timeago library. [Switch to the latest v
 :::
 
 # Options
-As the seconds argument `Parse()` function excepts strings. Here is an example of passed option.
+As the second argument, the `Parse()` function accepts strings. Here is an example of a passed option.
 
 ## Example with one option
 ```go
@@ -33,6 +33,6 @@ timeago.Parse(hourAgo, "online", "noSuffix") // 1 hour
 ## Available options
 | Option | Description |
 | --- | --- |
-| `online` | Displays **Online** if date interval withing 60 seconds. For example instead of `13 seconds ago` prints `Online` |
-| `justNow` | Displays **Just now** if date interval withing 60 seconds. For example instead of `32 seconds ago` prints `Just now`. |
-| `noSuffix` | Removes suffix from datetime result and get for example `5 minutes` instead of `5 minutes ago`. |
+| `online` | Displays **Online** if the date interval is within 60 seconds. For example, instead of `13 seconds ago` it prints `Online` |
+| `justNow` | Displays **Just now** if the date interval is within 60 seconds. For example, instead of `32 seconds ago` it prints `Just now`. |
+| `noSuffix` | Removes the suffix from the datetime result. For example, instead of `5 minutes ago` it returns `5 minutes`. |

@@ -5,7 +5,7 @@ description: Learn how to configure the library with different options like lang
 ---
 
 # Configurations
-You can update the library configuration using the `Configure` or `Reconfigure` function, both of which accept a `Config` struct. These functions can be called in your init function, main function, or anywhere in your codebase, as long as they are called before the `Parse` function. If not, the library will fall back to the default configuration.
+You can update the library configuration using the `Configure` or `Reconfigure` function, both of which accept a `Config` struct. These functions can be called in your init function, main function, or anywhere in your codebase, as long as they are called before the `Parse` function. Otherwise, the library will fall back to the default configuration.
 
 ## Configuration Options
 You can apply your configurations in two ways, depending on your needs.
@@ -47,7 +47,7 @@ You can find the full list of supported languages in the [Supported Languages](/
 :::
 
 ## Location
-Location specifies the timezone needed for parsing a date string like `2019-01-01 00:00:00` into a Go's [`time.Time`](https://pkg.go.dev/time) object. If `Location` is not set, it interprets the given time as [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) (Coordinated Universal Time). **You don't need to set this** if your date string is already in UTC.
+Location specifies the timezone needed for parsing a date string like `2019-01-01 00:00:00` into a Go `time.Time` object. If `Location` is not set, it interprets the given time as UTC (Coordinated Universal Time). You don't need to set this if your date string is already in UTC.
 
 ```go
 import "github.com/SerhiiCho/timeago/v3"
@@ -135,7 +135,7 @@ You can customize the output format using the `Format` field in the `LangSet` st
 
 For example, in German (supported by Timeago), the format is `{ago} {num} {timeUnit}`, which places the word `ago` at the beginning of the output. While English uses `10 minutes ago`, in German it becomes `Vor 10 Minuten`.
 
-To modify the output, simply update the `Format` field in the `LangSet` struct to your desired structure:
+To modify the output, simply update the `Format` field in the `LangSet` struct to your desired format:
 
 ```go
 import ago "github.com/SerhiiCho/timeago/v3"
@@ -154,7 +154,7 @@ func main() {
 }
 ```
 
-After this change, you output will be `It's been 10 minutes` instead of `10 minutes ago`.
+After this change, your output will be `It's been 10 minutes` instead of `10 minutes ago`.
 
 ## Thresholds
 The threshold in seconds to determine when the Timeago should show `Online` or `Just now` instead of `X seconds ago`. If the time difference is less than the threshold, it will show `Online` or `Just now` instead of `X seconds ago` depending on the provided [option](/v3/options.html).

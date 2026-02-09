@@ -9,7 +9,7 @@ You are viewing the outdated version of Timeago library. [Switch to the latest v
 :::
 
 # What is Timeago?
-Timeago is a fast, lightweight date and time library that converts a given date into a “time ago” format. It calculates and displays the time difference between the specified date and the current date, supporting both past and future dates for versatile use.
+Timeago is a fast, lightweight date and time library that converts a given date into a "time ago" format. It calculates and displays the time difference between the specified date and the current date, supporting both past and future dates for versatile use.
 
 ## Features
 Timeago has several nice features, such as:
@@ -28,7 +28,7 @@ Timeago has several nice features, such as:
 - 📖 Thorough documentation for ease of use
 
 ## Supported languages
-Timeago supports multiple languages, and you’re welcome to [contribute](/v2/contribute) additional ones. Check out the languages currently available:
+Timeago supports multiple languages, and you're welcome to [contribute](/v2/contribute) additional ones. Check out the languages currently available:
 
 | Flag | Language | Code (ISO 639-1) |
 | --- | --- | --- |
