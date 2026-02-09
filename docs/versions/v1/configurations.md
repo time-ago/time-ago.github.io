@@ -12,7 +12,7 @@ You are viewing the outdated version of Timeago library. [Switch to the latest v
 
 ### Language
 
-Default language is English. Optionally you can set the language in your application by calling `timeago.Set()` function and pass the flag "ru" or "en" in your init function.
+Default language is English. Optionally, you can set the language in your application by calling the `timeago.Set()` function and passing the flag "ru" or "en" in your init function.
 
 ```go
 func init() {
@@ -22,7 +22,7 @@ func init() {
 
 ### Location
 
-Default location is Europe/Kiev. Optionally you can set the location in your application by calling `timeago.Set()` function and pass the location you need in your init function.
+Default location is Europe/Kiev. Optionally, you can set the location in your application by calling the `timeago.Set()` function and passing the location you need in your init function.
 
 ```go
 func init() {

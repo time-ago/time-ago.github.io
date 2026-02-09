@@ -10,13 +10,13 @@ You are viewing the outdated version of Timeago library. [Switch to the latest v
 
 ## Contribute translation
 
-If you want to contribute support for a language that is fully supported, all you need to do is to copy/paste 2 files and change them to match the language that you want to add.
+If you want to contribute support for a language that is fully supported, all you need to do is copy/paste 2 files and change them to match the language you want to add.
 
-After than, add 1 line to `README.md` file and 1 rule to a `rules.go`. Here is my [commit](https://github.com/SerhiiCho/timeago/commit/d2f9e7f41d17ea3fc8ee10df2e1ac2e47f8e7e69) for supporting Ukrainian language that shows changes that I did to add the support. It's pretty straightforward. Waiting for you PR 😉.
+After that, add 1 line to the `README.md` file and 1 rule to the `rules.go` file. Here is my [commit](https://github.com/SerhiiCho/timeago/commit/d2f9e7f41d17ea3fc8ee10df2e1ac2e47f8e7e69) for supporting Ukrainian language that shows the changes I made to add support. It's pretty straightforward. Waiting for your PR 😉.
 
 ### Translation files
 
-Translation files live in `langs` directory. Each translation file is pretty simple json. Here's the example of `en.json`.
+Translation files live in the `langs` directory. Each translation file is a simple JSON object. Here's an example of `en.json`:
 
 ```json
 {
@@ -39,7 +39,7 @@ Translation files live in `langs` directory. Each translation file is pretty sim
 }
 ```
 
-Some languages (like Russian) have multiple plural forms of the word. For example English has only `second` and `seconds`, but Russian language has 3 types `секунда`, `секунд` and `секунды`. For these cases we can add additional translation for seconds, minutes, hours, days, weeks, months and years. Here is the example of `ru.json`.
+Some languages (like Russian) have multiple plural forms of words. For example, English has only `second` and `seconds`, but Russian has three forms: `секунда`, `секунд`, and `секунды`. For these cases, we can add additional translations for seconds, minutes, hours, days, weeks, months, and years. Here is an example of `ru.json`:
 
 ```json
 {
@@ -69,11 +69,11 @@ Some languages (like Russian) have multiple plural forms of the word. For exampl
 }
 ```
 
-You can see that it has `SecondsSpecial`, `MinutesSpecial`, `HoursSpecial`, `DaysSpecial`, `WeeksSpecial` and `YearsSpecial` keys.
+You can see that it has `SecondsSpecial`, `MinutesSpecial`, `HoursSpecial`, `DaysSpecial`, `WeeksSpecial`, and `YearsSpecial` keys.
 
 ### Rules
 
-All rules for each language is defined in `getRules` function in `rules.go` file. Rule is just a set of conditions that define when to apply singular form and when to apply plural form.
+All rules for each language are defined in the `getRules` function in the `rules.go` file. A rule is just a set of conditions that define when to apply the singular form and when to apply the plural form.
 
 Here is the example for English rules:
 
@@ -88,4 +88,4 @@ func getRules(number, lastDigit int) map[string]models.Rule {
 }
 ```
 
-We'll use singular form when number is equal to 1, and plural if number is more than 1 or number is 0. You can easily write your own rules for your language.
+We'll use the singular form when the number is equal to 1, and plural if the number is more than 1 or the number is 0. You can easily write your own rules for your language.

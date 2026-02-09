@@ -21,7 +21,7 @@ go get -u github.com/SerhiiCho/timeago
 <table>
   <thead>
     <tr>
-      <th>FLag</th>
+      <th>Flag</th>
       <th>Language</th>
       <th>Short representation</th>
     </tr>
@@ -47,13 +47,13 @@ go get -u github.com/SerhiiCho/timeago
 
 ## Usage
 
-For outputting post publishing date or something else you can just pass the date to function `timeago.Take()`. It will count the interval between now and given date and returns converted format.
+For outputting post publishing date or other content, you can just pass the date to the `timeago.Take()` function. It will calculate the interval between now and the given date and return the converted format.
 
 ```go
 timeago.Take("2019-10-23 10:46:00") // after 10 seconds outputs: 10 seconds ago
 ```
 
-If you want to show last user login like if user is online or not, you can optionally add `|online` to the datetime string. All it does is just displaying **Online** if date interval withing 60 seconds.
+If you want to show last user login status (whether the user is online or not), you can optionally add `|online` to the datetime string. This will display **Online** if the date interval is within 60 seconds.
 
 ```go
 timeago.Take("2019-10-23 10:46:00|online")
