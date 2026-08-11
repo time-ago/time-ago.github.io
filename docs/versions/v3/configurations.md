@@ -33,7 +33,7 @@ You can optionally set the language for your application. The default is `en` (E
 The language code follows the [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) standard. Here is an example of how to set the language to Russian:
 
 ```go
-import ago "github.com/SerhiiCho/timeago/v3"
+import ago "codeberg.org/timeago/timeago/v3"
 
 func init() {
     ago.Configure(ago.Config{
@@ -50,7 +50,7 @@ You can find the full list of supported languages in the [Supported Languages](/
 Location specifies the timezone needed for parsing a date string like `2019-01-01 00:00:00` into a Go `time.Time` object. If `Location` is not set, it interprets the given time as UTC (Coordinated Universal Time). You don't need to set this if your date string is already in UTC.
 
 ```go
-import "github.com/SerhiiCho/timeago/v3"
+import "codeberg.org/timeago/timeago/v3"
 
 func init() {
     timeago.Configure(timeago.Config{
@@ -76,7 +76,7 @@ I wouldn't suggest names like `time`, `t`, or `ta`, as they are too generic and 
 :::
 
 ```go
-import ago "github.com/SerhiiCho/timeago/v3"
+import ago "codeberg.org/timeago/timeago/v3"
 
 func main() {
     customTrans := []ago.LangSet{
@@ -138,7 +138,7 @@ For example, in German (supported by Timeago), the format is `{ago} {num} {timeU
 To modify the output, simply update the `Format` field in the `LangSet` struct to your desired format:
 
 ```go
-import ago "github.com/SerhiiCho/timeago/v3"
+import ago "codeberg.org/timeago/timeago/v3"
 
 func main() {
     customTrans := []ago.LangSet{
@@ -164,7 +164,7 @@ The threshold in seconds to determine when the Timeago should show `Online` or `
 
 ### `OnlineThreshold` example
 ```go
-import ago "github.com/SerhiiCho/timeago/v3"
+import ago "codeberg.org/timeago/timeago/v3"
 
 func init() {
     ago.Configure(ago.Config{
@@ -186,7 +186,7 @@ func main() {
 
 ### `JustNowThreshold` example
 ```go
-import ago "github.com/SerhiiCho/timeago/v3"
+import ago "codeberg.org/timeago/timeago/v3"
 
 func init() {
     ago.Configure(ago.Config{

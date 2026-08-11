@@ -7,11 +7,11 @@ const emit = defineEmits<{ (e: 'close'): void }>()
 
 <template>
     <div class="popup">
-        <span>Star Timeago on GitHub to keep us going</span>
+        <span>Star Timeago on Codeberg to keep us going</span>
 
         <div class="popup__buttons">
             <PopupBtn
-                href="https://github.com/SerhiiCho/timeago"
+                href="https://codeberg.org/timeago/timeago"
                 style="background-color: var(--popup-btn1)"
             >
                 <StarIcon width="20" height="20" /> Okay

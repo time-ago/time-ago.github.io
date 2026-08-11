@@ -1,7 +1,7 @@
 {
-    "name": "time-ago",
+    "name": "timeago",
     "main": "docs/.vitepress/index.js",
-    "repository": "https://github.com/time-ago/time-ago.github.io",
+    "repository": "https://codeberg.org/timeago/pages",
     "author": "SerhiiCho <serhiicho@protonmail.com>",
     "license": "MIT",
     "dependencies": {

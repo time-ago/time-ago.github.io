@@ -7,10 +7,10 @@ description: Detailed guide on how to upgrade Timeago from v2 to v3
 # Upgrade Guide: v2 to v3
 Timeago `v3` is a major release featuring a complete rewrite of the library. This rewrite introduces a more streamlined process for adding new language support and significantly improves error handling. This guide will help you transition from `v2` to `v3` smoothly.
 
-To simplify the upgrade process, no new features have been introduced in this release. Version [v3.0.0](https://github.com/SerhiiCho/timeago/pull/40) focuses entirely on changes to the Timeago API. New features are added in the [v3.1.0](https://github.com/SerhiiCho/timeago/pull/41) release, such as [support for 🇨🇳 Simplified Chinese language](https://github.com/SerhiiCho/timeago/issues/24), and extended configuration options.
+To simplify the upgrade process, no new features have been introduced in this release. Version [v3.0.0](https://codeberg.org/timeago/timeago/pulls/40) focuses entirely on changes to the Timeago API. New features are added in the [v3.1.0](https://codeberg.org/timeago/timeago/pulls/41) release, such as [support for 🇨🇳 Simplified Chinese language](https://codeberg.org/timeago/timeago/issues/24), and extended configuration options.
 
 ## Breaking Changes
-- **Update package namespace**. Changed package namespace to `github.com/SerhiiCho/timeago/v3`
+- **Update package namespace**. Changed package namespace to `codeberg.org/timeago/timeago/v3`
 - **Rename a function**. Renamed `SetConfig` function to `Configure` to make it better fit into Go naming conventions
 - **Improved error handling**. The `Parse` function now returns an error as the second returned value. You need to handle it in your code
 
@@ -22,11 +22,11 @@ To simplify the upgrade process, no new features have been introduced in this re
 ## Upgrade Steps
 
 ### Step 1: Update Package Namespace
-Using your editor's find and replace functionality, update the package namespace from `github.com/SerhiiCho/timeago/v2` to `github.com/SerhiiCho/timeago/v3`.
+Using your editor's find and replace functionality, update the package namespace:
 
 ```go
 import "github.com/SerhiiCho/timeago/v2" // [!code --]
-import "github.com/SerhiiCho/timeago/v3" // [!code ++]
+import "codeberg.org/timeago/timeago/v3" // [!code ++]
 ```
 
 ### Step 2: Update Dependencies
@@ -111,7 +111,7 @@ func main() {
 import (
     "log"
 
-    "github.com/SerhiiCho/timeago/v3"
+    "codeberg.org/timeago/timeago/v3"
 )
 
 func main() {

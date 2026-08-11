@@ -15,7 +15,7 @@ import (
     "time"
     "fmt"
 
-    ago "github.com/SerhiiCho/timeago/v3"
+    ago "codeberg.org/timeago/timeago/v3"
 )
 
 func main() {
@@ -43,7 +43,7 @@ import (
     "time"
     "fmt"
 
-    ago "github.com/SerhiiCho/timeago/v3"
+    ago "codeberg.org/timeago/timeago/v3"
 )
 
 func main() {
@@ -71,4 +71,4 @@ The full list of available options with constant names and string value if you p
 | `OptNoSuffix`<br>`"noSuffix"` | Removes suffix from datetime result and get for example `5 minutes` instead of `5 minutes ago` | It could be used in scenarios where you want to display a time duration without indicating whether it is in the past or future, or when you need a shorter, cleaner output for compact UI elements like widgets or dashboards. |
 | `OptUpcoming`<br>`"upcoming"` | Removes the suffix `ago` when the date is in the future. **This option is enabled by default, there is no need to pass it**. It's available to keep backward compatibility with the previous versions | No usage. Because it's enabled by default |
 
-This list will be updated with new useful options in the future if they are actually something that can be useful for the majority of users. If you want to suggest a new option, please create an issue on the [GitHub repository](https://github.com/SerhiiCho/timeago/issues)
+This list will be updated with new useful options in the future if they are actually something that can be useful for the majority of users. If you want to suggest a new option, please create an issue on the [Codeberg repository](https://codeberg.org/timeago/timeago/issues)

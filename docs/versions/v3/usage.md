@@ -27,7 +27,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/SerhiiCho/timeago/v2"
+	"codeberg.org/timeago/timeago/v2"
 )
 
 func main() {
@@ -50,7 +50,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/SerhiiCho/timeago/v2"
+	"codeberg.org/timeago/timeago/v2"
 )
 
 func main() {

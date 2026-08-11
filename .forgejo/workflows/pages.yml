@@ -1,0 +1,28 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build-and-deploy:
+    runs-on: burn
+    steps:
+      - name: Install deps 🛎️
+        run: |
+          apt-get update
+          apt-get install -y rsync
+
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy 🚀
+        uses: https://github.com/JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs/.vitepress/dist
+          branch: pages

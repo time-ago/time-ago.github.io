@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /v2/
-Sitemap: https://time-ago.github.io/sitemap.xml
+Sitemap: https://timeago.codeberg.page/sitemap.xml
