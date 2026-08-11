@@ -1,6 +1,6 @@
 # Timeago Docs
 
-Documentation website for [SerhiiCho/timeago](https://codeberg.org/timeago/timeago) package for Go (Golang) written with [VitePress](https://vitepress.dev/)
+Documentation website for [timeago](https://codeberg.org/timeago/timeago) package for Go (Golang) written with [VitePress](https://vitepress.dev/)
 
 ## Contribute
 
