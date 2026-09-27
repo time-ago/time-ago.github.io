@@ -15,10 +15,8 @@
         "build": "vitepress build docs",
         "preview": "yarn build && vitepress preview docs"
     },
-    "dependencies": {
-        "@viteplus/versions": "^2.0.9"
-    },
     "devDependencies": {
-        "vitepress": "^2.0.0-alpha.20"
-   }
+        "@viteplus/versions": "^2.0.8",
+        "vitepress": "^1.6.4"
+    }
 }

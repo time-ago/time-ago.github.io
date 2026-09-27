@@ -1,17 +1,13 @@
 import type { HeadConfig, TransformContext } from 'vitepress'
 import { defineVersionedConfig } from '@viteplus/versions'
 
-const host = 'https://timeago.serhiicho.com'
+const hostname = 'https://timeago.serhiicho.com'
 const VERSIONS = ['v3', 'v2', 'v1'] // NEWEST -> OLDEST
+const EXCLUDE_SITEMAP_PREFIXES = ['v1/', 'v2/']
 
 function setCanonicalTag(page: string): string {
     page = page.replace('.md', '.html')
-
-    if (page == 'index.html') {
-        return host
-    }
-
-    return host + '/' + page
+    return page == 'index.html' ? hostname : `${hostname}/${page}`
 }
 
 export default defineVersionedConfig(
@@ -34,21 +30,21 @@ export default defineVersionedConfig(
         },
 
         versionsConfig: {
+            current: VERSIONS[0],
             versionSwitcher: false,
         },
 
         lastUpdated: true,
 
         sitemap: {
-            hostname: 'https://timeago.codeberg.page',
+            hostname,
 
             // exclude old version pages from sitemap
-            transformItems: items => {
-                return items.filter(
+            transformItems: items =>
+                items.filter(
                     item =>
-                        !item.url.startsWith('v2/') && !item.url.startsWith('v1/'),
-                )
-            },
+                        !EXCLUDE_SITEMAP_PREFIXES.some(p => item.url.startsWith(p)),
+                ),
         },
 
         themeConfig: {
@@ -66,12 +62,19 @@ export default defineVersionedConfig(
 
             nav: {
                 root: [
-                    { component: 'VersionSwitcher' },
+                    {
+                        component: 'VersionSwitcher',
+                        props: {
+                            versions: VERSIONS,
+                            latestVersion: VERSIONS[0],
+                        },
+                    },
                     { text: 'Guide', link: '/' },
-                    { text: 'Community', link: '/community' },
+                    { text: 'Community', link: '/community', skipVersioning: true },
                     {
                         text: 'Changelog',
                         link: 'https://codeberg.org/timeago/timeago/src/branch/master/CHANGELOG.md',
+                        skipVersioning: true,
                     },
                 ],
             },
@@ -141,6 +144,5 @@ export default defineVersionedConfig(
             ],
         },
     },
-    // @ts-ignore
-    __dirname,
+    import.meta.dirname,
 )
