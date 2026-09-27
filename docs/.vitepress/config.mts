@@ -16,7 +16,7 @@ export default defineVersionedConfig(
         title: 'Timeago',
         head: [['link', { rel: 'icon', href: '/images/favicon.png' }]],
         description:
-            'Fast and lightweight date time library that converts given date into "n time ago" format',
+            `Fast and lightweight date time library that converts given date into 'n time ago' format`,
 
         transformHead: (ctx: TransformContext) => {
             const head: HeadConfig[] = []
