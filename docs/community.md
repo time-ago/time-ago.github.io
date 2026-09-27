@@ -1,6 +1,6 @@
 ---
 sidebar: false
-title: Our Community - v3
+title: Our Community
 description: Timeago community members who have helped shape Timeago by providing feedback, ideas, and GitHub stars
 ---
 <script setup>

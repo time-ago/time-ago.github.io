@@ -37,7 +37,7 @@ go mod tidy
 ```
 
 ### Step 3: Rename `SetConfig` Function
-Rename the `SetConfig` function to `Configure` or `Reconfigure` all over your codebase. You can read about the differences between them on the [Configurations](/v3/configurations.html) page.
+Rename the `SetConfig` function to `Configure` or `Reconfigure` all over your codebase. You can read about the differences between them on the [Configurations](/configurations.html) page.
 
 ```go
 timeago.SetConfig(timeago.Config{ // [!code --]

@@ -1,4 +1,14 @@
-import defineVersionedConfig from 'vitepress-versioning-plugin'
+import type { HeadConfig, TransformContext } from 'vitepress'
+import { defineVersionedConfig } from '@viteplus/versions'
+
+const hostname = 'https://timeago.serhiicho.com'
+const VERSIONS = ['v3', 'v2', 'v1'] // NEWEST -> OLDEST
+const EXCLUDE_SITEMAP_PREFIXES = ['v1/', 'v2/']
+
+function setCanonicalTag(page: string): string {
+    page = page.replace('.md', '.html')
+    return page == 'index.html' ? hostname : `${hostname}/${page}`
+}
 
 export default defineVersionedConfig(
     {
@@ -8,26 +18,36 @@ export default defineVersionedConfig(
         description:
             'Fast and lightweight date time library that converts given date into "n time ago" format',
 
-        versioning: {
-            latestVersion: 'v3',
+        transformHead: (ctx: TransformContext) => {
+            const head: HeadConfig[] = []
+
+            head.push([
+                'link',
+                { rel: 'canonical', href: setCanonicalTag(ctx.page) },
+            ])
+
+            return head
+        },
+
+        versionsConfig: {
+            current: VERSIONS[0],
+            versionSwitcher: false,
         },
 
         lastUpdated: true,
 
         sitemap: {
-            hostname: 'https://timeago.codeberg.page',
+            hostname,
 
             // exclude old version pages from sitemap
-            transformItems: items => {
-                return items.filter(
+            transformItems: items =>
+                items.filter(
                     item =>
-                        !item.url.startsWith('v2/') && !item.url.startsWith('v1/'),
-                )
-            },
+                        !EXCLUDE_SITEMAP_PREFIXES.some(p => item.url.startsWith(p)),
+                ),
         },
 
         themeConfig: {
-            versionSwitcher: false,
             logo: '/images/logo.png',
             footer: {
                 message:
@@ -40,34 +60,37 @@ export default defineVersionedConfig(
                 provider: 'local',
             },
 
-            nav: [
-                {
-                    component: 'VersionSwitcher',
-                    props: {
-                        versions: ['v3', 'v2', 'v1'],
-                        latestVersion: 'v3',
+            nav: {
+                root: [
+                    {
+                        component: 'VersionSwitcher',
+                        props: {
+                            versions: VERSIONS,
+                            latestVersion: VERSIONS[0],
+                        },
                     },
-                },
-                { text: 'Guide', link: '/v3/' },
-                { text: 'Community', link: '/community' },
-                {
-                    text: 'Changelog',
-                    link: 'https://codeberg.org/timeago/timeago/src/branch/master/CHANGELOG.md',
-                },
-            ],
+                    { text: 'Guide', link: '/' },
+                    { text: 'Community', link: '/community', skipVersioning: true },
+                    {
+                        text: 'Changelog',
+                        link: 'https://codeberg.org/timeago/timeago/src/branch/master/CHANGELOG.md',
+                        skipVersioning: true,
+                    },
+                ],
+            },
             sidebar: {
                 '/v1/': [
-                    { text: 'Get Started', link: '/v1/' },
-                    { text: 'Contribute', link: '/v1/contribute' },
-                    { text: 'Configurations', link: '/v1/configurations' },
+                    { text: 'Get Started', link: '/' },
+                    { text: 'Contribute', link: '/contribute' },
+                    { text: 'Configurations', link: '/configurations' },
                 ],
                 '/v2/': [
                     {
                         text: 'Guide',
                         items: [
-                            { text: 'Get Started', link: '/v2/' },
-                            { text: 'Configurations', link: '/v2/configurations' },
-                            { text: 'Options', link: '/v2/options' },
+                            { text: 'Get Started', link: '/' },
+                            { text: 'Configurations', link: '/configurations' },
+                            { text: 'Options', link: '/options' },
                         ],
                     },
                     {
@@ -75,21 +98,21 @@ export default defineVersionedConfig(
                         items: [
                             {
                                 text: 'What is Timeago?',
-                                link: '/v2/what-is-timeago',
+                                link: '/what-is-timeago',
                             },
-                            { text: 'Contribute', link: '/v2/contribute' },
+                            { text: 'Contribute', link: '/contribute' },
                         ],
                     },
                 ],
-                '/v3/': [
+                '/': [
                     {
                         text: 'Guide',
                         items: [
-                            { text: 'Installation', link: '/v3/' },
-                            { text: 'Usage Guide', link: '/v3/usage' },
-                            { text: 'Configurations', link: '/v3/configurations' },
-                            { text: 'Options', link: '/v3/options' },
-                            { text: 'Upgrade Guide', link: '/v3/upgrade' },
+                            { text: 'Installation', link: '/install' },
+                            { text: 'Usage Guide', link: '/usage' },
+                            { text: 'Configurations', link: '/configurations' },
+                            { text: 'Options', link: '/options' },
+                            { text: 'Upgrade Guide', link: '/upgrade' },
                         ],
                     },
                     {
@@ -97,9 +120,9 @@ export default defineVersionedConfig(
                         items: [
                             {
                                 text: 'What is Timeago?',
-                                link: '/v3/what-is-timeago',
+                                link: '/what-is-timeago',
                             },
-                            { text: 'Contribute', link: '/v3/contribute' },
+                            { text: 'Contribute', link: '/contribute' },
                         ],
                     },
                 ],
@@ -121,6 +144,5 @@ export default defineVersionedConfig(
             ],
         },
     },
-    // @ts-ignore
-    __dirname,
+    import.meta.dirname,
 )

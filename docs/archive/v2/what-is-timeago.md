@@ -14,11 +14,10 @@ Timeago is a fast, lightweight date and time library that converts a given date 
 ## Features
 Timeago has several nice features, such as:
 
-- 📅 Flexible date parsing, supporting both [past and future dates](/v2/#usage-with-the-date-in-the-future)
-- ⚙️ Configurable [options](/v2/options) to suit various use cases
+- ⚙️ Configurable [options](options) to suit various use cases
 - ✅ Comprehensive test coverage for reliability
 - 🌐 Support for multiple languages
-- ✍️ Easy [contribution](/v2/contribute) of new language support
+- ✍️ Easy [contribution](/contribute) of new language support
 - 📦 Compact codebase for minimal footprint
 - 🚀 Regular, non-breaking updates
 - 🕰️ Unix timestamp parsing
@@ -28,7 +27,7 @@ Timeago has several nice features, such as:
 - 📖 Thorough documentation for ease of use
 
 ## Supported languages
-Timeago supports multiple languages, and you're welcome to [contribute](/v2/contribute) additional ones. Check out the languages currently available:
+Timeago supports multiple languages, and you're welcome to [contribute](/contribute) additional ones. Check out the languages currently available:
 
 | Flag | Language | Code (ISO 639-1) |
 | --- | --- | --- |

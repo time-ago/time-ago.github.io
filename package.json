@@ -4,9 +4,6 @@
     "repository": "https://codeberg.org/timeago/pages",
     "author": "SerhiiCho <serhiicho@protonmail.com>",
     "license": "MIT",
-    "dependencies": {
-        "vitepress-versioning-plugin": "^1.2.1"
-    },
     "contributors": [
         {
             "name": "SerhiiCho",
@@ -19,6 +16,7 @@
         "preview": "yarn build && vitepress preview docs"
     },
     "devDependencies": {
+        "@viteplus/versions": "^2.0.8",
         "vitepress": "^1.6.4"
-   }
+    }
 }
