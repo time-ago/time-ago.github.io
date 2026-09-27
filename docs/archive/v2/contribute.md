@@ -11,7 +11,7 @@ You are viewing the outdated version of Timeago library. [Switch to the latest v
 # Contribute translation
 You can contribute language support in 3 simple steps. All you need to do is copy/paste 2 files and change them to match the language you want to add.
 
-Here is my [commit](https://github.com/SerhiiCho/timeago/commit/c1ee0429b540f1cce5eb61b6a3441022d9cb43e7) for supporting Dutch language that shows the changes I made to add support. It's pretty straightforward. Waiting for your PR 😉.
+Here is my [commit](https://codeberg.org/timeago/timeago/commit/c1ee0429b540f1cce5eb61b6a3441022d9cb43e7) for supporting Dutch language that shows the changes I made to add support. It's pretty straightforward. Waiting for your PR 😉.
 
 :::tip
 You can skip the step with `README.md` file, since all the documentation is here instead of a `README.md` file like it was before.

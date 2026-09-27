@@ -182,8 +182,8 @@ To the `README.md` file add a country flag for the language that you want to add
 The last step is to update the [CHANGELOG.md](https://codeberg.org/timeago/timeago/src/branch/master/CHANGELOG.md) file to let the users know that you've added a new language support. Here is an example of how I've added Chinese language to the change log:
 
 ```md
-- Added [OnlineThreshold](https://timeago.serhiicho.com/v3/configurations.html#thresholds) parameter to the configurations to set the threshold for the "Online" status
-- Added [JustNowThreshold](https://timeago.serhiicho.com/v3/configurations.html#justnowthreshold-example) parameter to the configurations to set the threshold for the "Just now" status
+- Added [OnlineThreshold](https://timeago.serhiicho.com/configurations.html#thresholds) parameter to the configurations to set the threshold for the "Online" status
+- Added [JustNowThreshold](https://timeago.serhiicho.com/configurations.html#justnowthreshold-example) parameter to the configurations to set the threshold for the "Just now" status
 - Added support for Chinese Simplified language 🇨🇳 // [!code ++]
 ```
 

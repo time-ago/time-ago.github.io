@@ -27,7 +27,7 @@ func main() {
 ```
 
 :::tip Supported languages
-You can find the full list of supported languages in the [What is Timeago?](/v2/what-is-timeago.html#supported-languages) section.
+You can find the full list of supported languages in the [What is Timeago?](what-is-timeago.html#supported-languages) section.
 :::
 
 ## Location
@@ -100,5 +100,5 @@ func main() {
 With this configurations, you'll get `5 д` instead of `5 дней назад`.
 
 :::tip Supported words
-You can find the full list of words that you can override in `langs/` directory in the root of the project, or you can find them in our [GitHub repository](https://github.com/SerhiiCho/timeago/tree/master/langs).
+You can find the full list of words that you can override in `langs/` directory in the root of the project, or you can find them in our [Codeberg repository](https://codeberg.org/timeago/timeago/src/branch/master/langs).
 :::

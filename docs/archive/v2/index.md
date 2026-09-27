@@ -9,7 +9,7 @@ You are viewing the outdated version of Timeago library. [Switch to the latest v
 :::
 
 # Guide
-To read about the library, visit the [What is Timeago?](/v2/what-is-timeago) page.
+To read about the library, visit the [What is Timeago?](/what-is-timeago) page.
 
 ## Quick Start
 Library versioning follows the Go Modules versioning. To get the latest version of the library, run the following command:

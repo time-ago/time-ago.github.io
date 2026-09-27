@@ -8,7 +8,7 @@ description: Learn how to quickly get started with the Timeago library by instal
 Learn how to install Timeago in your Go project and understand the requirements.
 
 :::tip What is Timeago?
-Visit our page "[What is Timeago?](/v3/what-is-timeago)" to learn more about the Timeago library and its mission.
+Visit our page "[What is Timeago?](/what-is-timeago)" to learn more about the Timeago library and its mission.
 :::
 
 ## Quick Start
@@ -18,7 +18,7 @@ Library versioning is following the Go Modules versioning. To get the latest ver
 go get -u codeberg.org/timeago/timeago/v3
 ```
 
-If you are using the `v2` version, follow the [Upgrade Guide](/v3/upgrade) to update your codebase to the `v3 (latest)` version.
+If you are using the `v2` version, follow the [Upgrade Guide](/upgrade) to update your codebase to the `v3 (latest)` version.
 
 Keep your dependencies up to date by running the following command:
 

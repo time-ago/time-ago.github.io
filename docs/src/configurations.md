@@ -21,11 +21,11 @@ Below is the full list of available configurations for the `textwire.Config` str
 
 | Name | Default Value | Type | Description |
 |------|---------------|------|-------------|
-| [Language](/v3/configurations.html#language) | `en` | `string` | Specifies the language for your application using the [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) format. |
-| [Location](/v3/configurations.html#location) | `UTC` | `string` | Defines the timezone for parsing date strings. |
-| [Translations](/v3/configurations.html#translation-overrides) | `[]LangSet{}` | `[]LangSet` | Allows customization of the output format and translations. |
-| [OnlineThreshold](/v3/configurations.html#thresholds) | `60` | `int` | Sets the threshold (in seconds) for showing `Online` instead of `X seconds ago`. |
-| [JustNowThreshold](/v3/configurations.html#thresholds) | `60` | `int` | Sets the threshold (in seconds) for displaying `Just now` instead of `X seconds ago`. |
+| [Language](/configurations.html#language) | `en` | `string` | Specifies the language for your application using the [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) format. |
+| [Location](/configurations.html#location) | `UTC` | `string` | Defines the timezone for parsing date strings. |
+| [Translations](/configurations.html#translation-overrides) | `[]LangSet{}` | `[]LangSet` | Allows customization of the output format and translations. |
+| [OnlineThreshold](/configurations.html#thresholds) | `60` | `int` | Sets the threshold (in seconds) for showing `Online` instead of `X seconds ago`. |
+| [JustNowThreshold](/configurations.html#thresholds) | `60` | `int` | Sets the threshold (in seconds) for displaying `Just now` instead of `X seconds ago`. |
 
 ## Language
 You can optionally set the language for your application. The default is `en` (English), but you can change it to any language supported by Timeago.
@@ -43,7 +43,7 @@ func init() {
 ```
 
 :::tip Supported languages
-You can find the full list of supported languages in the [Supported Languages](/v3/what-is-timeago.html#supported-languages) section.
+You can find the full list of supported languages in the [Supported Languages](/what-is-timeago.html#supported-languages) section.
 :::
 
 ## Location
@@ -157,7 +157,7 @@ func main() {
 After this change, your output will be `It's been 10 minutes` instead of `10 minutes ago`.
 
 ## Thresholds
-The threshold in seconds to determine when the Timeago should show `Online` or `Just now` instead of `X seconds ago`. If the time difference is less than the threshold, it will show `Online` or `Just now` instead of `X seconds ago` depending on the provided [option](/v3/options.html).
+The threshold in seconds to determine when the Timeago should show `Online` or `Just now` instead of `X seconds ago`. If the time difference is less than the threshold, it will show `Online` or `Just now` instead of `X seconds ago` depending on the provided [option](/options.html).
 
 **Minimum value**: `1` *(always show `Online` / `Just now`)*\
 **Default value**: `60` *(show `Online` / `Just now` if the time difference is less than 60 seconds)*

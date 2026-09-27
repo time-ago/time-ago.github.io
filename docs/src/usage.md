@@ -20,7 +20,7 @@ The `timeago.Parse()` function accepts different types of datetime and returns t
 Any other types or formats passed to the `Parse` function will return an error!
 
 ### Date in the Past
-If you pass a date in the past, Timeago will return output containing the word `ago`, indicating that the date is in the past. Unless you specify the `noSuffix` option. Read [here](/v3/options.html#available-options) about options and how to use them.
+If you pass a date in the past, Timeago will return output containing the word `ago`, indicating that the date is in the past. Unless you specify the `noSuffix` option. Read [here](/options.html#available-options) about options and how to use them.
 
 ```go
 import (

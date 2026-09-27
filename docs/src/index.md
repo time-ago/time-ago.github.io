@@ -8,10 +8,10 @@ hero:
   actions:
     - theme: brand
       text: Get Started →
-      link: /v3/
+      link: /install
     - theme: alt
       text: What is Timeago?
-      link: /v3/what-is-timeago
+      link: /what-is-timeago
   image:
     src: /images/logo.png
     alt: Timeago Logo
