@@ -4,10 +4,6 @@ search: false
 title: Contribute - v2
 ---
 
-:::danger Outdated version
-You are viewing the outdated version of Timeago library. [Switch to the latest version](/) to get all the new features and improvements
-:::
-
 # Contribute translation
 You can contribute language support in 3 simple steps. All you need to do is copy/paste 2 files and change them to match the language you want to add.
 

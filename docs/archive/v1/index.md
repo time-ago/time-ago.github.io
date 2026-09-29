@@ -4,10 +4,6 @@ search: false
 title: Get Started - v1
 ---
 
-:::danger Outdated version
-You are viewing the outdated version of Timeago library. [Switch to the latest version](/) to get all the new features and improvements
-:::
-
 # Get Started
 
 ## Quick Start

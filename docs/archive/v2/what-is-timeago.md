@@ -4,10 +4,6 @@ search: false
 title: What is Timeago? - v2
 ---
 
-:::danger Outdated version
-You are viewing the outdated version of Timeago library. [Switch to the latest version](/) to get all the new features and improvements
-:::
-
 # What is Timeago?
 Timeago is a fast, lightweight date and time library that converts a given date into a "time ago" format. It calculates and displays the time difference between the specified date and the current date, supporting both past and future dates for versatile use.
 

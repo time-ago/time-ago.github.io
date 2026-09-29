@@ -1,6 +1,7 @@
 import type { HeadConfig, TransformContext } from 'vitepress'
 import { defineVersionedConfig } from '@viteplus/versions'
 import { versions, latestVersion, outdatedVersions } from './theme/versions'
+import { resolve } from 'node:path'
 
 const hostname = 'https://timeago.serhiicho.com'
 const excludeSitemapPrefixes = outdatedVersions.map(v => `${v}/`)
@@ -29,6 +30,14 @@ export default defineVersionedConfig(
         },
 
         lastUpdated: true,
+
+        vite: {
+            resolve: {
+                alias: {
+                    '@': resolve(import.meta.dirname, './theme'),
+                },
+            },
+        },
 
         sitemap: {
             hostname,

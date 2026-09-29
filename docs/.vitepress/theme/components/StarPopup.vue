@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import StarIcon from './Icons/StarIcon.vue'
-import PopupBtn from './PopupBtn.vue'
+import StarIcon from '@/components/Icons/StarIcon.vue'
+import PopupBtn from '@/components/PopupBtn.vue'
 
 const emit = defineEmits<{ (e: 'close'): void }>()
 </script>

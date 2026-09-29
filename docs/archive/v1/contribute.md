@@ -4,10 +4,6 @@ search: false
 title: Contribute - v1
 ---
 
-:::danger Outdated version
-You are viewing the outdated version of Timeago library. [Switch to the latest version](/) to get all the new features and improvements
-:::
-
 ## Contribute translation
 
 If you want to contribute support for a language that is fully supported, all you need to do is copy/paste 2 files and change them to match the language you want to add.

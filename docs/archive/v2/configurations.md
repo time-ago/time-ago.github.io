@@ -4,10 +4,6 @@ search: false
 title: Configurations - v2
 ---
 
-:::danger Outdated version
-You are viewing the outdated version of Timeago library. [Switch to the latest version](/) to get all the new features and improvements
-:::
-
 # Configurations
 We can set library configurations with the `SetConfig` function that accepts a `Config` structure.
 

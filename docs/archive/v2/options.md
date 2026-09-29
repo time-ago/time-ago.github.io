@@ -4,10 +4,6 @@ search: false
 title: Options - v2
 ---
 
-:::danger Outdated version
-You are viewing the outdated version of Timeago library. [Switch to the latest version](/) to get all the new features and improvements
-:::
-
 # Options
 As the second argument, the `Parse()` function accepts strings. Here is an example of a passed option.
 

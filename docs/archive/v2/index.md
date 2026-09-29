@@ -4,10 +4,6 @@ search: false
 title: Guide - v2
 ---
 
-:::danger Outdated version
-You are viewing the outdated version of Timeago library. [Switch to the latest version](/) to get all the new features and improvements
-:::
-
 # Guide
 To read about the library, visit the [What is Timeago?](/what-is-timeago) page.
 
