@@ -1,10 +1,9 @@
 import type { HeadConfig, TransformContext } from 'vitepress'
 import { defineVersionedConfig } from '@viteplus/versions'
+import { versions, latestVersion, outdatedVersions } from './theme/versions'
 
 const hostname = 'https://timeago.serhiicho.com'
-const versions = ['v3', 'v2', 'v1'] // NEWEST -> OLDEST
-const excludeSitemapPrefixes = ['v1/', 'v2/']
-const latestVersion = versions[0]
+const excludeSitemapPrefixes = outdatedVersions.map(v => `${v}/`)
 
 function setCanonicalTag(page: string): string {
     page = page.replace('.md', '.html')
