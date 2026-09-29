@@ -2,8 +2,9 @@ import type { HeadConfig, TransformContext } from 'vitepress'
 import { defineVersionedConfig } from '@viteplus/versions'
 
 const hostname = 'https://timeago.serhiicho.com'
-const VERSIONS = ['v3', 'v2', 'v1'] // NEWEST -> OLDEST
-const EXCLUDE_SITEMAP_PREFIXES = ['v1/', 'v2/']
+const versions = ['v3', 'v2', 'v1'] // NEWEST -> OLDEST
+const excludeSitemapPrefixes = ['v1/', 'v2/']
+const latestVersion = versions[0]
 
 function setCanonicalTag(page: string): string {
     page = page.replace('.md', '.html')
@@ -15,22 +16,16 @@ export default defineVersionedConfig(
         lang: 'en-US',
         title: 'Timeago',
         head: [['link', { rel: 'icon', href: '/images/favicon.png' }]],
-        description:
-            `Fast and lightweight date time library that converts given date into 'n time ago' format`,
+        description: `Fast and lightweight date time library that converts given date into 'n time ago' format`,
 
         transformHead: (ctx: TransformContext) => {
             const head: HeadConfig[] = []
-
-            head.push([
-                'link',
-                { rel: 'canonical', href: setCanonicalTag(ctx.page) },
-            ])
-
+            head.push(['link', { rel: 'canonical', href: setCanonicalTag(ctx.page) }])
             return head
         },
 
         versionsConfig: {
-            current: VERSIONS[0],
+            current: latestVersion,
             versionSwitcher: false,
         },
 
@@ -38,22 +33,15 @@ export default defineVersionedConfig(
 
         sitemap: {
             hostname,
-
             // exclude old version pages from sitemap
-            transformItems: items =>
-                items.filter(
-                    item =>
-                        !EXCLUDE_SITEMAP_PREFIXES.some(p => item.url.startsWith(p)),
-                ),
+            transformItems: items => items.filter(item => !excludeSitemapPrefixes.some(p => item.url.startsWith(p)))
         },
 
         themeConfig: {
             logo: '/images/logo.png',
             footer: {
-                message:
-                    'Released under the <a href="https://codeberg.org/timeago/timeago/src/branch/master/LICENSE.md" target="_blank">MIT License</a>',
-                copyright:
-                    'Copyright © 2019 - present <a href="https://serhiicho.com/about-me" target="_blank">Serhii Cho</a>',
+                message: 'Released under the <a href="https://codeberg.org/timeago/timeago/src/branch/master/LICENSE.md" target="_blank">MIT License</a>',
+                copyright: 'Copyright © 2019 - present <a href="https://serhiicho.com/about-me" target="_blank">Serhii Cho</a>',
             },
 
             search: {
@@ -62,13 +50,7 @@ export default defineVersionedConfig(
 
             nav: {
                 root: [
-                    {
-                        component: 'VersionSwitcher',
-                        props: {
-                            versions: VERSIONS,
-                            latestVersion: VERSIONS[0],
-                        },
-                    },
+                    { component: 'VersionSwitcher', props: { versions, latestVersion }},
                     { text: 'Guide', link: '/' },
                     { text: 'Community', link: '/community', skipVersioning: true },
                     {
