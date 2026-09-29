@@ -134,5 +134,4 @@ export default defineVersionedConfig(
             ],
         },
     },
-    import.meta.dirname,
 )
