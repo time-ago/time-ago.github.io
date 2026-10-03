@@ -16,7 +16,7 @@ export default defineVersionedConfig(
         lang: 'en-US',
         title: 'Timeago',
         head: [['link', { rel: 'icon', href: '/images/favicon.png' }]],
-        description: `Fast and lightweight date time library that converts given date into 'n time ago' format`,
+        description: "Fast and lightweight date time library that converts given date into 'n time ago' format",
 
         transformHead: (ctx: TransformContext) => {
             const head: HeadConfig[] = []
@@ -59,7 +59,7 @@ export default defineVersionedConfig(
             nav: {
                 root: [
                     { component: 'VersionSwitcher', props: { versions, latestVersion }},
-                    { text: 'Guide', link: '/install' },
+                    { text: 'Guide', link: '/guide' },
                     { text: 'Community', link: '/community', skipVersioning: true },
                     {
                         text: 'Changelog',
@@ -69,7 +69,7 @@ export default defineVersionedConfig(
             },
             sidebar: {
                 '/v1/': [
-                    { text: 'Get Started', link: '/' },
+                    { text: 'Get Started', link: '/guide' },
                     { text: 'Contribute', link: '/contribute' },
                     { text: 'Configurations', link: '/configurations' },
                 ],
@@ -77,7 +77,7 @@ export default defineVersionedConfig(
                     {
                         text: 'Guide',
                         items: [
-                            { text: 'Get Started', link: '/' },
+                            { text: 'Get Started', link: '/guide' },
                             { text: 'Configurations', link: '/configurations' },
                             { text: 'Options', link: '/options' },
                         ],
@@ -97,7 +97,7 @@ export default defineVersionedConfig(
                     {
                         text: 'Guide',
                         items: [
-                            { text: 'Installation', link: '/install' },
+                            { text: 'Installation', link: '/guide' },
                             { text: 'Usage Guide', link: '/usage' },
                             { text: 'Configurations', link: '/configurations' },
                             { text: 'Options', link: '/options' },

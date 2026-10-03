@@ -1,56 +1,43 @@
 ---
-outline: deep
-search: false
-title: Get Started - v1
+layout: home
+
+hero:
+  name: "Timeago"
+  text: "Fast and lightweight"
+  tagline: Date and time library for your Go project that converts dates into 'time ago' format.
+  actions:
+    - theme: brand
+      text: Get Started →
+      link: /v1/guide
+  image:
+    src: /images/logo.png
+    alt: Timeago Logo
+
+features:
+  - title: Flexible Date and Time Parsing
+    details: Timeago has a flexible date parsing and can parse several different date formats, such as UNIX timestamp, date string like "YYYY-MM-DD HH:MM:SS", and Go's "time.Time" struct
+    icon: 🧩
+  - title: Support for Multiple Languages
+    details: 🇬🇧 🇷🇺 🇺🇦 🇳🇱 🇩🇪 🇨🇳 🇧🇾 🇪🇸 🇯🇵 🇫🇷<br>You can output dates in several different languages such as English, Russian, Chinese, Ukrainian, Dutch, German, and you can easily contribute your own language
+    icon: 🌍
+  - title: Configurable Options to Suit Diverse Use Cases
+    details: You can configure Timeago to suit your needs to the point where you can even modify the output format of the date, override translation sets, and more
+    icon: ⚙️
+  - title: Comprehensive Testing for Reliability
+    details: You cannot find a datetime library that is tested better than this one. It connects to several code quality analyzers and has tests for each supported language
+    icon: 🧪
+  - title: Compact Codebase for a Minimal Footprint
+    details: Timeago is designed to be as lightweight as possible, so you can use it in your project without worrying about the size of the binary
+    icon: 📦
+  - title: Easy Contribution of the New Language Support
+    details: Timeago is designed to be as flexible as possible, so you can easily contribute your own language support to the project following our detailed guidelines
+    icon: ✍️
+  - title: Thorough Documentation for Ease of Use
+    details: Timeago has a detailed documentation that covers all the features of the library including older versions, so you can easily integrate Timeago into your project
+    icon: 📖
+  - title: Detailed Changelog for All Updates and Features
+    details: Timeago has a detailed changelog that covers all the updates and features of the library, so you can easily track the changes and updates
+    icon: 📝
 ---
 
-# Get Started
-
-## Quick Start
-
-```bash
-go get -u github.com/SerhiiCho/timeago
-```
-
-## Supported languages
-
-<table>
-  <thead>
-    <tr>
-      <th>Flag</th>
-      <th>Language</th>
-      <th>Short representation</th>
-    </tr>
-  </thead>
-  <tbody>
-     <tr>
-      <td>🇬🇧</td>
-      <td>English</td>
-      <td>en</td>
-    </tr>
-    <tr>
-      <td>🇷🇺</td>
-      <td>Russian</td>
-      <td>ru</td>
-    </tr>
-    <tr>
-      <td>🇺🇦</td>
-      <td>Ukrainian</td>
-      <td>uk</td>
-    </tr>
-  </tbody>
-</table>
-
-## Usage
-
-For outputting post publishing date or other content, you can just pass the date to the `timeago.Take()` function. It will calculate the interval between now and the given date and return the converted format.
-
-```go
-timeago.Take("2019-10-23 10:46:00") // after 10 seconds outputs: 10 seconds ago
-```
-
-If you want to show last user login status (whether the user is online or not), you can optionally add `|online` to the datetime string. This will display **Online** if the date interval is within 60 seconds.
-
-```go
-timeago.Take("2019-10-23 10:46:00|online")
-```
+<StarPopup />

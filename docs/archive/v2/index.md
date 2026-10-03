@@ -1,53 +1,46 @@
 ---
-outline: deep
-search: false
-title: Guide - v2
+layout: home
+
+hero:
+  name: "Timeago"
+  text: "Fast and lightweight"
+  tagline: Date and time library for your Go project that converts dates into 'time ago' format.
+  actions:
+    - theme: brand
+      text: Get Started →
+      link: /v2/guide
+    - theme: alt
+      text: What is Timeago?
+      link: /v2/what-is-timeago
+  image:
+    src: /images/logo.png
+    alt: Timeago Logo
+
+features:
+  - title: Flexible Date and Time Parsing
+    details: Timeago has a flexible date parsing and can parse several different date formats, such as UNIX timestamp, date string like "YYYY-MM-DD HH:MM:SS", and Go's "time.Time" struct
+    icon: 🧩
+  - title: Support for Multiple Languages
+    details: 🇬🇧 🇷🇺 🇺🇦 🇳🇱 🇩🇪 🇨🇳 🇧🇾 🇪🇸 🇯🇵 🇫🇷<br>You can output dates in several different languages such as English, Russian, Chinese, Ukrainian, Dutch, German, and you can easily contribute your own language
+    icon: 🌍
+  - title: Configurable Options to Suit Diverse Use Cases
+    details: You can configure Timeago to suit your needs to the point where you can even modify the output format of the date, override translation sets, and more
+    icon: ⚙️
+  - title: Comprehensive Testing for Reliability
+    details: You cannot find a datetime library that is tested better than this one. It connects to several code quality analyzers and has tests for each supported language
+    icon: 🧪
+  - title: Compact Codebase for a Minimal Footprint
+    details: Timeago is designed to be as lightweight as possible, so you can use it in your project without worrying about the size of the binary
+    icon: 📦
+  - title: Easy Contribution of the New Language Support
+    details: Timeago is designed to be as flexible as possible, so you can easily contribute your own language support to the project following our detailed guidelines
+    icon: ✍️
+  - title: Thorough Documentation for Ease of Use
+    details: Timeago has a detailed documentation that covers all the features of the library including older versions, so you can easily integrate Timeago into your project
+    icon: 📖
+  - title: Detailed Changelog for All Updates and Features
+    details: Timeago has a detailed changelog that covers all the updates and features of the library, so you can easily track the changes and updates
+    icon: 📝
 ---
 
-# Guide
-To read about the library, visit the [What is Timeago?](/what-is-timeago) page.
-
-## Quick Start
-Library versioning follows the Go Modules versioning. To get the latest version of the library, run the following command:
-
-```bash
-go get -u github.com/SerhiiCho/timeago/v2
-```
-
-## Usage
-Pass the date to the `timeago.Parse()` function. It calculates the interval between the current datetime and the given datetime, returning a parsed string in the format `x time ago`. The library can work with both past and future dates. The usage is straightforward.
-
-### Allowed types
-The `timeago.Parse()` function accepts different types of datetime:
-
-- `int` Unix timestamp
-- `time.Time` Type from Go time package
-- `string` Datetime string in format `YYYY-MM-DD HH:MM:SS`
-
-> Any other type will trigger a panic.
-
-```go
-timeago.Parse("2019-10-23 10:46:00") // string date
-timeago.Parse(time.Now()) // time.Time
-timeago.Parse(1642607826) // Unix timestamp
-```
-
-### Usage with dates in the past
-```go
-pastDate := time.Now().Add(-time.Hour)
-
-res := timeago.Parse(pastDate)
-
-fmt.Println(res) // 1 hour ago
-```
-
-### Usage with dates in the future
-Future dates are also supported. The library will return the correct string without the word `ago`.
-
-```go
-pastDate := time.Now().Add(time.Hour * 2)
-
-res := timeago.Parse(pastDate)
-
-fmt.Println(res) // 2 hours
-```
+<StarPopup />
