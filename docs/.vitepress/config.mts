@@ -59,12 +59,11 @@ export default defineVersionedConfig(
             nav: {
                 root: [
                     { component: 'VersionSwitcher', props: { versions, latestVersion }},
-                    { text: 'Guide', link: '/' },
+                    { text: 'Guide', link: '/install' },
                     { text: 'Community', link: '/community', skipVersioning: true },
                     {
                         text: 'Changelog',
                         link: 'https://codeberg.org/timeago/timeago/src/branch/master/CHANGELOG.md',
-                        skipVersioning: true,
                     },
                 ],
             },
