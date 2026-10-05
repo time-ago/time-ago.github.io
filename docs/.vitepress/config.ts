@@ -1,6 +1,6 @@
 import type { HeadConfig, TransformContext } from 'vitepress'
 import { defineVersionedConfig } from '@viteplus/versions'
-import { versions, latestVersion, outdatedVersions } from './theme/versions'
+import { latestVersion, outdatedVersions } from './theme/versions.ts'
 import { resolve } from 'node:path'
 
 const hostname = 'https://timeago.serhiicho.com'
@@ -30,6 +30,7 @@ export default defineVersionedConfig(
         },
 
         lastUpdated: true,
+        cleanUrls: true,
 
         vite: {
             resolve: {
@@ -58,7 +59,7 @@ export default defineVersionedConfig(
 
             nav: {
                 root: [
-                    { component: 'VersionSwitcher', props: { versions, latestVersion }},
+                    { component: 'VersionSwitcher' },
                     { text: 'Guide', link: '/guide' },
                     { text: 'Community', link: '/community', skipVersioning: true },
                     {
@@ -67,19 +68,17 @@ export default defineVersionedConfig(
                     },
                 ],
             },
+
             sidebar: {
-                '/v1/': [
-                    { text: 'Get Started', link: '/guide' },
-                    { text: 'Contribute', link: '/contribute' },
-                    { text: 'Configurations', link: '/configurations' },
-                ],
-                '/v2/': [
+                root: [
                     {
                         text: 'Guide',
                         items: [
-                            { text: 'Get Started', link: '/guide' },
+                            { text: 'Installation', link: '/guide' },
+                            { text: 'Usage Guide', link: '/usage' },
                             { text: 'Configurations', link: '/configurations' },
                             { text: 'Options', link: '/options' },
+                            { text: 'Upgrade Guide', link: '/upgrade' },
                         ],
                     },
                     {
@@ -93,15 +92,18 @@ export default defineVersionedConfig(
                         ],
                     },
                 ],
-                '/': [
+                'v1': [
+                    { text: 'Get Started', link: '/guide' },
+                    { text: 'Contribute', link: '/contribute' },
+                    { text: 'Configurations', link: '/configurations' },
+                ],
+                'v2': [
                     {
                         text: 'Guide',
                         items: [
-                            { text: 'Installation', link: '/guide' },
-                            { text: 'Usage Guide', link: '/usage' },
+                            { text: 'Get Started', link: '/guide' },
                             { text: 'Configurations', link: '/configurations' },
                             { text: 'Options', link: '/options' },
-                            { text: 'Upgrade Guide', link: '/upgrade' },
                         ],
                     },
                     {
