@@ -49,7 +49,7 @@ export default defineVersionedConfig(
         themeConfig: {
             logo: '/images/logo.png',
             footer: {
-                message: 'Released under the <a href="https://codeberg.org/timeago/timeago/src/branch/master/LICENSE.md" target="_blank">MIT License</a>',
+                message: 'Released under the <a href="https://github.com/SerhiiCho/timeago/blob/master/LICENSE.md" target="_blank">MIT License</a>',
                 copyright: 'Copyright © 2019 - present <a href="https://serhiicho.com/about-me" target="_blank">Serhii Cho</a>',
             },
 
@@ -64,7 +64,7 @@ export default defineVersionedConfig(
                     { text: 'Community', link: '/community', skipVersioning: true },
                     {
                         text: 'Changelog',
-                        link: 'https://codeberg.org/timeago/timeago/src/branch/master/CHANGELOG.md',
+                        link: 'https://github.com/SerhiiCho/timeago/blob/master/CHANGELOG.md',
                     },
                 ],
             },
@@ -123,12 +123,12 @@ export default defineVersionedConfig(
                 {
                     icon: 'go',
                     ariaLabel: 'Golang',
-                    link: 'https://pkg.go.dev/codeberg.org/timeago/timeago/v3',
+                    link: 'https://pkg.go.dev/github.com/SerhiiCho/timeago/v3',
                 },
                 {
-                    icon: 'codeberg',
-                    ariaLabel: 'Codeberg',
-                    link: 'https://codeberg.org/timeago/timeago',
+                    icon: 'github',
+                    ariaLabel: 'GitHub',
+                    link: 'https://github.com/SerhiiCho/timeago',
                 },
             ],
         },
