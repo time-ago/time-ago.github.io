@@ -1,5 +1,7 @@
 # Timeago Docs
 
+[![Build and Deploy](https://github.com/time-ago/time-ago.github.io/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/time-ago/time-ago.github.io/actions/workflows/gh-pages.yml)
+
 Documentation website for [timeago](https://github.com/SerhiiCho/timeago) package for Go (Golang) written with [VitePress](https://vitepress.dev/)
 
 ## Contribute

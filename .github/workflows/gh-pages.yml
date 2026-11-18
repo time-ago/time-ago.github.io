@@ -18,7 +18,7 @@ jobs:
               run: npm ci && npm run build
 
             - name: Deploy Vite App 🚀
-              uses: https://codeberg.org/act/deploy-vite@v1
+              uses: SerhiiChoAction/deploy-vite@v1
               with:
                   host-user: ${{ secrets.HOST_USER }}
                   host-ip: ${{ secrets.HOST_IP }}
