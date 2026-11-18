@@ -8,7 +8,7 @@ title: Contribute - v1
 
 If you want to contribute support for a language that is fully supported, all you need to do is copy/paste 2 files and change them to match the language you want to add.
 
-After that, add 1 line to the `README.md` file and 1 rule to the `rules.go` file. Here is my [commit](https://codeberg.org/timeago/timeago/commit/c1ee0429b540f1cce5eb61b6a3441022d9cb43e7) for supporting Ukrainian language that shows the changes I made to add support. It's pretty straightforward. Waiting for your PR 😉.
+After that, add 1 line to the `README.md` file and 1 rule to the `rules.go` file. Here is my [commit](https://github.com/SerhiiCho/timeago/commit/c1ee0429b540f1cce5eb61b6a3441022d9cb43e7) for supporting Ukrainian language that shows the changes I made to add support. It's pretty straightforward. Waiting for your PR 😉.
 
 ### Translation files
 

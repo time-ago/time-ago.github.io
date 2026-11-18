@@ -15,7 +15,7 @@ Visit our page "[What is Timeago?](/what-is-timeago)" to learn more about the Ti
 Library versioning is following the Go Modules versioning. To get the latest version of the library run the following command:
 
 ```bash
-go get -u codeberg.org/timeago/timeago/v3
+go get -u github.com/SerhiiCho/timeago/v3
 ```
 
 If you are using the `v2` version, follow the [Upgrade Guide](/upgrade) to update your codebase to the `v3 (latest)` version.
@@ -27,4 +27,4 @@ go get -u ./...
 ```
 
 ## Requirements
-You can find the minimum requirement version of Go for the Timeago library in the [go.mod](https://codeberg.org/timeago/timeago/src/branch/master/go.mod) file on Codeberg.
+You can find the minimum requirement version of Go for the Timeago library in the [go.mod](https://github.com/SerhiiCho/timeago/blob/master/go.mod  ) file on GitHub.

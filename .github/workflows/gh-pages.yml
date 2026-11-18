@@ -2,8 +2,7 @@ name: Build and Deploy
 
 on:
     push:
-        branches:
-            - master
+        branches: [master]
 
 permissions:
     contents: write
@@ -16,12 +15,14 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Install and Build 🔧
-              run: |
-                  npm install
-                  npm run build
+              run: npm ci && npm run build
 
-            - name: Deploy 🚀
-              uses: JamesIves/github-pages-deploy-action@v4
+            - name: Deploy Vite App 🚀
+              uses: https://codeberg.org/act/deploy-vite@v1
               with:
-                  # The folder the action should deploy.
-                  folder: docs/.vitepress/dist
+                  host-user: ${{ secrets.HOST_USER }}
+                  host-ip: ${{ secrets.HOST_IP }}
+                  host-key: ${{ secrets.HOST_PRIVATE_SSH_KEY }}
+                  from: docs/.vitepress/dist/
+                  to: ~/pages/timeago
+                  to-pages-branch: true
