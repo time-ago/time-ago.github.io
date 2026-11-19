@@ -8,13 +8,10 @@ import { VPTeamMembers } from 'vitepress/theme'
 
 const members = [
     {
-        avatar: 'https://codeberg.org/avatars/008a7041edc77fc2748fb7dceefc3958a2b0d68713b500583af88019e8b74f95',
+        avatar: 'https://avatars.githubusercontent.com/u/35465417',
         name: 'Serhii Cho',
         title: 'Creator',
-        links: [
-            { icon: 'codeberg', link: 'https://codeberg.org/SerhiiCho' },
-            { icon: 'mastodon', link: 'https://mastodon.social/@SerhiiCho' }
-        ]
+        links: [{ icon: 'github', link: 'https://github.com/SerhiiCho' }]
     },
     {
         avatar: 'https://www.github.com/cyclimse.png',
