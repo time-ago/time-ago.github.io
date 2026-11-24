@@ -1,6 +1,6 @@
 ---
 outline: deep
-title: Usage Guide - v3
+title: Usage Guide - v4
 description: Learn how to quickly get started with the Timeago library
 ---
 
@@ -27,7 +27,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/SerhiiCho/timeago/v3"
+	"github.com/SerhiiCho/timeago/v4"
 )
 
 func main() {
@@ -50,7 +50,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/SerhiiCho/timeago/v3"
+	"github.com/SerhiiCho/timeago/v4"
 )
 
 func main() {

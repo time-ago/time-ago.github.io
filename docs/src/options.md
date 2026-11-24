@@ -1,6 +1,6 @@
 ---
 outline: deep
-title: Options - v3
+title: Options - v4
 description: Modify the output by passing additional options to the Parse function
 ---
 
@@ -15,7 +15,7 @@ import (
     "time"
     "fmt"
 
-    ago "github.com/SerhiiCho/timeago/v3"
+    ago "github.com/SerhiiCho/timeago/v4"
 )
 
 func main() {
@@ -43,7 +43,7 @@ import (
     "time"
     "fmt"
 
-    ago "github.com/SerhiiCho/timeago/v3"
+    ago "github.com/SerhiiCho/timeago/v4"
 )
 
 func main() {
