@@ -1,6 +1,6 @@
 ---
 outline: deep
-title: What is Timeago - v3
+title: What is Timeago - v4
 description: Learn about Timeago, a fast, lightweight date and time library that converts a given date into a "time ago" format
 ---
 

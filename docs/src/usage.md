@@ -1,6 +1,6 @@
 ---
 outline: deep
-title: Usage Guide - v3
+title: Usage Guide - v4
 description: Learn how to quickly get started with the Timeago library
 ---
 
@@ -19,6 +19,23 @@ The `timeago.Parse()` function accepts different types of datetime and returns t
 
 Any other types or formats passed to the `Parse` function will return an error!
 
+### How Dates Are Converted
+Timeago picks the largest unit that fits the time difference. Values are floored, not rounded, so `23 hours 59 minutes` becomes `23 hours ago` and `6 days 23 hours` becomes `6 days ago`.
+
+| Time difference | Unit |
+| --- | --- |
+| Less than 60 seconds | seconds |
+| Less than 60 minutes | minutes |
+| Less than 24 hours | hours |
+| Less than 7 days | days |
+| Less than 4 weeks | weeks |
+| Less than 12 months | months |
+| 12 months or more | years |
+
+::: info Calendar months and years
+Months and years are calculated using calendar boundaries instead of fixed 30- and 365-day durations. For example, January 31 to February 28 counts as `1 month`, and February 29 to February 28 next year counts as `1 year`.
+:::
+
 ### Date in the Past
 If you pass a date in the past, Timeago will return output containing the word `ago`, indicating that the date is in the past. Unless you specify the `noSuffix` option. Read [here](/options.html#available-options) about options and how to use them.
 
@@ -27,7 +44,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/SerhiiCho/timeago/v3"
+	"github.com/SerhiiCho/timeago/v4"
 )
 
 func main() {
@@ -50,7 +67,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/SerhiiCho/timeago/v3"
+	"github.com/SerhiiCho/timeago/v4"
 )
 
 func main() {

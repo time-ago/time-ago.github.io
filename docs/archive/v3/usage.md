@@ -1,0 +1,66 @@
+---
+outline: deep
+title: Usage Guide - v3
+description: Learn how to quickly get started with the Timeago library
+---
+
+# Usage Guide
+Pass the date into the `timeago.Parse()` function. It calculates the interval between the current datetime and the given datetime, returning a parsed string in the format `x time ago`. The library can work not only with dates in the past but future dates as well. The usage is pretty straight forward.
+
+### Allowed types
+The `timeago.Parse()` function accepts different types of datetime and returns the result and an error. The allowed inputs are:
+
+- Unix timestamp: `int`, `int64`, `int32`, `uint`, `uint64`, `uint32`, `string`
+    - Example: `1642607826`
+- Type from Go time package: `time.Time`
+    - Example: `time.Now()`
+- Datetime string in format `YYYY-MM-DD HH:MM:SS`
+    - Example: `2019-10-23 10:46:11`
+
+Any other types or formats passed to the `Parse` function will return an error!
+
+### Date in the Past
+If you pass a date in the past, Timeago will return output containing the word `ago`, indicating that the date is in the past. Unless you specify the `noSuffix` option. Read [here](/options.html#available-options) about options and how to use them.
+
+```go
+import (
+	"fmt"
+	"time"
+
+	"github.com/SerhiiCho/timeago/v3"
+)
+
+func main() {
+	pastDate := time.Now().Add(-time.Minute * 5)
+	out, err := timeago.Parse(pastDate)
+
+	if err != nil {
+		// handle error
+	}
+
+	fmt.Println(out) // Output: "5 minutes ago"
+}
+```
+
+### Date in the Future
+Future dates are also supported. Timeago will return the correct string without the word `ago` when the date is in the future.
+
+```go
+import (
+	"fmt"
+	"time"
+
+	"github.com/SerhiiCho/timeago/v3"
+)
+
+func main() {
+    pastDate := time.Now().Add(time.Hour * 2)
+    res, err := timeago.Parse(pastDate)
+
+    if err != nil {
+        // handle error
+    }
+
+    fmt.Println(res) // Output: "2 hours"
+}
+```

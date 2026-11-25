@@ -1,6 +1,6 @@
 ---
 outline: deep
-title: Installation - v3
+title: Installation - v4
 description: Learn how to quickly get started with the Timeago library by installing it in your Go project
 ---
 
@@ -15,10 +15,10 @@ Visit our page "[What is Timeago?](/what-is-timeago)" to learn more about the Ti
 Library versioning is following the Go Modules versioning. To get the latest version of the library run the following command:
 
 ```bash
-go get -u github.com/SerhiiCho/timeago/v3
+go get -u github.com/SerhiiCho/timeago/v4
 ```
 
-If you are using the `v2` version, follow the [Upgrade Guide](/upgrade) to update your codebase to the `v3 (latest)` version.
+If you are using the `v2` version, follow the [Upgrade Guide](/upgrade) to update your codebase to the `v4 (latest)` version.
 
 Keep your dependencies up to date by running the following command:
 
