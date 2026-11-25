@@ -16,14 +16,20 @@ const members = [
     {
         avatar: 'https://www.github.com/cyclimse.png',
         name: 'Andy Méry',
-        title: 'Contributor',
+        title: 'Early Contributor',
         links: [{ icon: 'github', link: 'https://github.com/cyclimse' }],
     },
     {
         avatar: 'https://www.github.com/demget.png',
         name: 'demget',
-        title: 'Contributor',
+        title: 'Early Contributor',
         links: [{ icon: 'github', link: 'https://github.com/demget' }],
+    },
+    {
+        avatar: 'https://avatars.githubusercontent.com/u/11029197',
+        name: 'Andy Méry',
+        title: 'Early Contributor',
+        links: [{ icon: 'github', link: 'https://github.com/prascli' }],
     },
     {
         avatar: 'https://www.github.com/sheldonhull.png',
@@ -84,12 +90,6 @@ const members = [
         name: 'Hank Shen',
         title: 'Early Stargazer',
         links: [{ icon: 'github', link: 'https://github.com/admpub' }],
-    },
-    {
-        avatar: 'https://www.github.com/J-iSkeLo.png',
-        name: 'L. Chernenikiy',
-        title: 'Early Stargazer',
-        links: [{ icon: 'github', link: 'https://github.com/J-iSkeLo' }],
     },
     {
         avatar: 'https://avatars.githubusercontent.com/u/40788381',
