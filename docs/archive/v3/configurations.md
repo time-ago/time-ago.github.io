@@ -17,7 +17,7 @@ The `Configure` function lets you update specific settings without altering the 
 Use the `Reconfigure` function to completely replace the current configuration. This function resets all settings to their default values before applying the new configuration, ensuring a clean slate for your updates.
 
 ## Available Configurations
-Below is the full list of available configurations for the `textwire.Config` struct:
+Below is the full list of available configurations for the `timeago.Config` struct:
 
 | Name | Default Value | Type | Description |
 |------|---------------|------|-------------|
